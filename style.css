@@ -1,157 +1,79 @@
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	text-decoration: none;
-	font-family: sans-serif;
-	font-size: 14px;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-body {
-	width: 100%;
-	min-height: 100vh;
-	background-color: rgb(243, 243, 243);
-	margin: 0;
-	padding: 0;
-	display: flex;
-	justify-content: center;
+body{
+  height:100vh;
+  display:grid;
+  place-items:center;
+  font-family:"Poppins", sans-serif;
+  background-color:#131313;
 }
 
-.instagram-wrapper {
-	display: flex;
-	align-items: center;
-	justify-content: start;
-	width: 60%;
-	height: 100vh;
+.profile-card{
+  width:400px;
+  min-width:250px;
 }
 
-.instagram-phone {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 50%;
+.card-header{
+  background-color:#ff7a00;
+  background-image:linear-gradient(rgba(0,0,128),rgba(0,0,255,0.9)), url("https://st.depositphotos.com/5240153/52108/v/450/depositphotos_521083828-stock-illustration-website-design-industry-concept-doodle.jpg");
+  background-size:200px;
+  border-bottom:5px solid #131313;
+  position:relative;
+  height:165px;
+  padding:0 20px;
+  box-shadow:0 30px 40px rgba(0,0,0,0.2);
 }
 
-.instagram-phone img {
-	height: 35rem;
+.card-header img{
+  max-width:150px;
+  position:absolute;
+  bottom:0;
+  left:50%;
+  transform:translate(-50%,50%);
 }
 
-.instagram-continue {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	flex-direction: column;
-	width: 50%;
-	height: 34rem;
+.card-body{
+  background-color:#fff;
+  text-transform:capitalize;
+  text-align:center;
+  padding:20px 30px;
 }
 
-.group {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-direction: column;
-	background-color: #FFF;
-	width: 100%;
-	padding: 1.3rem 0;
-	border: 1px solid lightgray;
+.card-body h2{
+  font-size:32px;
+  margin-top:64px;
 }
 
-.group:nth-child(1){
-	min-height: 19rem;
+.social-media-list{
+  margin:30px 0 50px;
+  display:flex;
+  justify-content:space-between;
 }
 
-.instagram-logo {
-	height: 3rem;
+.social-media-list svg{
+  width:50px;
+  height:50px;
+  fill:#131313;
+  cursor:pointer;
 }
 
-.profile-photo {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 50%;
-	overflow: hidden;
+.social-media-list svg:not(:last-child){
+  margin-right:20px;
 }
 
-.profile-photo img {
-	width: 6rem;
-	height: 6rem;
-}
-
-.instagram-login {
-	background-color: #0095f6;
-	color: #fff;
-	padding: 8px;
-	border-radius: 4px;
-}
-
-.instagram-logout {
-	color: #0095f6;
-	margin-top: 1rem;
-}
-
-.not-account {
-	color: rgb(160, 160, 160);
-}
-
-.link-blue {
-	color: #0095f6;
-}
-
-.get-the-app {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	padding: 1.3rem 0;
-}
-
-.download {
-	display: flex;
-	width: 100%;
-	justify-content: space-evenly;
-	align-items: center;
-	padding: 1rem;
-}
-
-.app-download {
-	height: 3rem;
-	width: 10rem;
-	background-size: cover;
-}
-
-.app-download:nth-child(1) {
-	background-image: url('download.png');
-}
-
-.app-download:nth-child(2) {
-	background-image: url(download1.png);
-}
-
-/* Responsividade */
-
-@media (max-width: 1024px) {
-	.instagram-wrapper {
-		width: 90%;
-	}
-}
-
-@media (max-width: 650px) {
-	body {
-		background-color: #FFF;
-	}
-	.instagram-wrapper {
-		width: 90%;
-	}
-	.instagram-phone {
-		display: none;
-	}
-
-	.instagram-continue {
-		width: 100%;
-	}
-
-	.group {
-		border:  1px solid transparent;
-	}
+.card-body .btn{
+  display:inline-block;
+  margin-bottom:20px;
+  text-decoration:none;
+  padding:16px 64px;
+  background-color:#00008B;
+  color:#fff;
+  border-radius:100px;
+  font-weight:500;
+  cursor:pointer;
+  box-shadow:0 10px 30px rgba(255,122,0,0.2);
 }
