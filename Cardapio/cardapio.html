@@ -1,0 +1,83 @@
+<!-- Cardápio.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="img/lanche.jpg" alt="" class="img-header">
+        <h1>Faça seu pedido!</h1>
+    </header>
+    <main>
+
+        <main>
+            <section id="hamburgueres">
+                <h2>Hamburgueres</h2>
+                <ul>
+                    <li>
+                        <h3>X-Burger</h3>
+                        <button class="add-to-cart">Adicionar ao carrinho</button>
+                        <p>Blend de carne, queijo, alface, tomate, batata palha e maionese.</p>
+                        <p>R$ 15,00</p>
+                    </li>
+                    <li>
+                        <h3>X-Salada</h3>
+                        <button class="add-to-cart">Adicionar ao carrinho</button>
+                        <p>Blend de carne, queijo, alface, tomate, cenoura, beterraba e maionese.</p>
+                        <p>R$ 17,00</p>
+                    </li>
+                    <li>
+                        <h3>X-Bacon</h3>
+                        <button class="add-to-cart">Adicionar ao carrinho</button>
+                        <p>Blend de carne, queijo, alface, tomate, batata palha, maionese e bacon.</p>
+                        <p>R$ 19,00</p>
+                    </li>
+                    <li>
+                        <h3>X-Egg</h3>
+                        <button class="add-to-cart">Adicionar ao carrinho</button>
+                        <p>Blend de carne, queijo, alface, tomate, batata palha, maionese e ovo.</p>
+                        <p>R$ 20,00</p>
+                    </li>
+                </ul>
+            </section>
+            
+            <section id="carrinho">
+                <h2>Carrinho de compras</h2>
+                <ul id="cart-items"></ul>
+            </section>
+            
+            <script>
+                const cart = [];
+                const cartItems = document.getElementById('cart-items');
+            
+                document.querySelectorAll('.add-to-cart').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const item = button.parentElement;
+                        const name = item.querySelector('h3').innerText;
+                        const price = item.querySelector('p:last-child').innerText;
+            
+                        cart.push({ name, price });
+                        updateCart();
+                    });
+                });
+            
+                function updateCart() {
+                    cartItems.innerHTML = '';
+                    cart.forEach(item => {
+                        const li = document.createElement('li');
+                        li.innerText = `${item.name} - ${item.price}`;
+                        cartItems.appendChild(li);
+                    });
+                }
+            </script>   
+    </main>
+    
+    <footer>
+        <p>&copy; 2022, Cardápio.</p>
+    </footer>
+</body>
+</html>
