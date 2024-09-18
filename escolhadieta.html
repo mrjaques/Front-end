@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #0d3b4a;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        max-width: 300px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #0d3b4a;
+        border-radius: 8px;
+    }
+    .form-select, .btn {
+        margin-bottom: 15px;
+    }
+    .btn {
+        background-color: #007bff;
+        border: none;
+    }
+
+    form {
+  max-width: 300px; /* largura máxima do formulário */
+  margin: 40px auto; /* centraliza o formulário horizontalmente */
+  padding: 20px; /* adiciona um padding de 20px para dar espaço entre o conteúdo e a borda */
+  background-color: #000000; /* fundo branco */
+  border: 1px solid #505050; /* borda cinza claro */
+  border-radius: 10px; /* adiciona um efeito de borda arredondada */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* adiciona uma sombra leve para dar profundidade */
+}
+
+label {
+  display: block; /* faz com que o label seja exibido como um bloco */
+  margin-bottom: 10px; /* espaço entre o label e o input */
+}
+
+select {
+  width: 100%; /* largura do select */
+  height: 40px; /* altura do select */
+  padding: 10px; /* adiciona um padding de 10px para dar espaço entre o conteúdo e a borda */
+  border: 1px solid #ccc; /* borda cinza claro */
+  border-radius: 5px; /* adiciona um efeito de borda arredondada */
+}
+
+input[type="submit"] {
+  width: 100%; /* largura do botão */
+  height: 40px; /* altura do botão */
+  padding: 10px; /* adiciona um padding de 10px para dar espaço entre o conteúdo e a borda */
+  background-color: #007bff; /* cor do botão */
+  color: #ffffff; /* cor do texto do botão */
+  border: none; /* remove a borda do botão */
+  border-radius: 5px; /* adiciona um efeito de borda arredondada */
+  cursor: pointer; /* muda o cursor para uma mão quando o usuário passa o mouse sobre o botão */
+}
+
+input[type="submit"]:hover {
+  background-color: #0069d9; /* cor do botão quando o usuário passa o mouse sobre ele */
+}
+
+</style>
+<body>
+    <form method="POST" action="cadastros.php">
+        <label for="categoria">Escolha sua dieta:</label>
+        <select name="categoria" id="categoria">
+            <option value="vegana">Vegana</option>
+            <option value="para_hemorroida">Para hemorroida</option>
+            <option value="sem_acucar">Sem açúcar</option>
+            <option value="low_carb">Low Carb</option>
+            <option value="alcalina">Alcalina</option>
+            <option value="cetogenica">Cetogênica</option>
+        </select>
+        <input type="submit" value="Recomendar">
+    </form>
+    
+</body>
+</html>
