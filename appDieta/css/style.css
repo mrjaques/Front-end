@@ -1,1 +1,41 @@
+body {
+    background-color: #0d1b2a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    text-align: center;
+    background-color: #000; /* fundo branco */
+    width: 50%;
+    height: 60%;
+    padding: 20px; /* adiciona um padding de 20px para dar espaço entre o conteúdo e a borda */
+    border-radius: 10px; /* adiciona um efeito de borda arredondada */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* adiciona uma sombra leve para dar profundidade */
+  }
 
+.form-container
+
+
+.logo {
+    width: 150px;
+    height: 150px;
+}
+.title {
+    color: #a3d900;
+    font-size: 24px;
+    font-weight: bold;
+}
+.subtitle {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    width: 50%;
+}
