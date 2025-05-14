@@ -1,0 +1,51 @@
+/* Centralizar o body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d5e1ef; /* Cor de fundo semelhante à imagem */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura total da tela */
+}
+
+/* Estilizar o container */
+.container {
+    width: 320px; /* Largura fixa para o cartão */
+    background-color: #fff;
+    border-radius: 16px; /* Bordas arredondadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilizar a imagem do QR Code */
+.qr-code {
+    width: 100%; /* Largura total do container */
+    border-radius: 8px; /* Bordas arredondadas */
+    margin-bottom: 20px; /* Espaço abaixo da imagem */
+}
+
+/* Estilizar o título */
+.title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1f314f; /* Cor do texto */
+    margin-bottom: 15px; /* Espaço abaixo do título */
+}
+
+/* Estilizar a descrição */
+.description {
+    font-size: 15px;
+    color: #7b879d; /* Cor do texto */
+    line-height: 1.5; /* Altura da linha */
+    margin-bottom: 20px; /* Espaço abaixo da descrição */
+}
+
+/* Estilizar a atribuição */
+.attribution {
+    font-size: 12px;
+    color: #7b879d;
+    margin-top: 20px;
+}
